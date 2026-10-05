@@ -1,13 +1,13 @@
 <h1 align="center">Alejandro Pérez</h1>
 <p align="center">
-  Telecommunications Engineering student (UMH) · Embedded systems & full-stack development
+  Telecommunication Technologies Engineering graduate (UMH) · Embedded systems & full-stack development
 </p>
 
 ---
 
 ## About
 
-I build complete products where hardware, firmware and software meet: from ESP32/STM32 prototypes to cross-platform apps and web backends. I'm studying Telecommunication Technologies Engineering at Universidad Miguel Hernández (UMH).
+I build complete products where hardware, firmware and software meet: from ESP32/STM32 prototypes to cross-platform apps and web backends. I hold a degree in Telecommunication Technologies Engineering from Universidad Miguel Hernández (UMH).
 
 ## Tech stack
 
