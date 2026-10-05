@@ -35,11 +35,6 @@ Cross-platform application with shared data, authentication and offline-oriented
 
 `React Native` `Expo` `Supabase`
 
-### Ink-Off! — Game
-Game developed with Godot.
-
-`Godot`
-
 ---
 
 <sub>Some projects are kept private. Happy to walk through them in an interview.</sub>
