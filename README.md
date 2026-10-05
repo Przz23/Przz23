@@ -34,7 +34,3 @@ Full-stack web platform with authentication, payments, database and PWA support.
 Cross-platform application with shared data, authentication and offline-oriented UX.
 
 `React Native` `Expo` `Supabase`
-
----
-
-<sub>Some projects are kept private. Happy to walk through them in an interview.</sub>
