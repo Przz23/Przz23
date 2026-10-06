@@ -20,9 +20,6 @@
 
 ---
 
-## About
-
-I build complete products where hardware, firmware and software meet: from ESP32/STM32 prototypes to cross-platform apps and web backends. I hold a degree in Telecommunication Technologies Engineering from Universidad Miguel Hernández (UMH).
 
 ## Projects
 
