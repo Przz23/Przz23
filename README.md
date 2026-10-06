@@ -5,10 +5,6 @@
 
 <div align="center">
 
-<img src="./contrib-heatmap.svg" alt="GitHub contribution heatmap" width="860">
-
-<br>
-
 <table>
   <tr>
     <td valign="top"><img src="./portrait.svg" alt="ASCII portrait" width="370"></td>
