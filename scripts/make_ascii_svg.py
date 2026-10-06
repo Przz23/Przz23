@@ -1,8 +1,8 @@
-"""Processed photo -> ascii-portrait.svg (rows are revealed left-to-right, once).
+"""Processed photo -> portrait.svg (rows are revealed left-to-right, once).
 
     python scripts/make_ascii_svg.py [input] [output]
 
-Defaults: photo/processed.png -> ascii-portrait.svg
+Defaults: photo/processed.png -> portrait.svg
 """
 import sys
 from pathlib import Path
@@ -14,7 +14,7 @@ from theme import BG, BORDER, FONT, TEXT, esc
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "photo" / "processed.png"
-DST = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "ascii-portrait.svg"
+DST = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "portrait.svg"
 
 RAMP = " .`:-=+*cs#%@"  # sparse -> dense
 COLS, CW, RH = 150, 4, 7  # characters per row, char width, row pitch (px)

@@ -11,7 +11,7 @@
 
 <table>
   <tr>
-    <td valign="top"><img src="./ascii-portrait.svg?v=2" alt="ASCII portrait" width="370"></td>
+    <td valign="top"><img src="./portrait.svg" alt="ASCII portrait" width="370"></td>
     <td valign="top"><img src="./info-card.svg" alt="Profile summary" width="490"></td>
   </tr>
 </table>
