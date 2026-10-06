@@ -1,0 +1,4 @@
+# Raw / processed photos are never committed; only the generated ascii-portrait.svg is.
+photo/
+__pycache__/
+*.pyc

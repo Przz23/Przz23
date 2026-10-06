@@ -3,6 +3,16 @@
   Telecommunication Technologies Engineering graduate (UMH) · Embedded systems & full-stack development
 </p>
 
+<div align="center">
+
+<img src="./contrib-heatmap.svg" alt="GitHub contribution heatmap" width="860">
+
+<br>
+
+<img src="./info-card.svg" alt="Profile summary" width="490">
+
+</div>
+
 ---
 
 ## About

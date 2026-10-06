@@ -1,0 +1,6 @@
+# Only needed locally to build the ASCII portrait (not used by GitHub Actions).
+Pillow>=10.0
+numpy>=1.26
+# Optional, better results:
+# rembg           # background removal
+# opencv-python   # CLAHE contrast
