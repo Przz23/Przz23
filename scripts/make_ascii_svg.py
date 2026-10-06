@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 from theme import BG, BORDER, FONT, TEXT, esc
 
@@ -17,22 +17,43 @@ SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "photo" / "processed.pn
 DST = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "ascii-portrait.svg"
 
 RAMP = " .`:-=+*cs#%@"  # sparse -> dense
-COLS, CW, RH = 100, 6, 10  # characters per row, char width, row pitch (px)
+COLS, CW, RH = 150, 4, 7  # characters per row, char width, row pitch (px)
 PAD = 14
+CROP = (0.16, 0.0, 0.84, 0.64)  # (left, top, right, bottom) fractions of the subject box
+DETAIL = 3.5  # local-contrast strength
 
 
 def main() -> None:
     if not SRC.exists():
         sys.exit(f"Not found: {SRC}\nRun scripts/prep_photo.py first.")
     img = Image.open(SRC).convert("L")
+
+    # Crop to the subject (everything that is not near-white), with a small margin.
+    full = np.asarray(img, dtype=float) / 255.0
+    ys, xs = np.where(full < 0.97)
+    m = int(0.03 * max(img.size))
+    box = (max(xs.min() - m, 0), max(ys.min() - m, 0), min(xs.max() + m, img.width), min(ys.max() + m, img.height))
+    # Zoom on the head: CROP is (left, top, right, bottom) as fractions of the subject box.
+    bw, bh = box[2] - box[0], box[3] - box[1]
+    box = (box[0] + int(CROP[0] * bw), box[1] + int(CROP[1] * bh), box[0] + int(CROP[2] * bw), box[1] + int(CROP[3] * bh))
+    img = img.crop(box)
+
     rows = round(COLS * img.height / img.width * (CW / RH))
     a = np.asarray(img.resize((COLS, rows), Image.LANCZOS), dtype=float) / 255.0
+    mask = a < 0.95  # subject vs. white background
+
+    # Local contrast: add the difference to a blurred copy so eyes, brows and shadows
+    # stay visible even though skin is nearly uniform.
+    blur = np.asarray(img.filter(ImageFilter.GaussianBlur(img.width * 0.015)).resize((COLS, rows), Image.LANCZOS), dtype=float) / 255.0
+    e = a + DETAIL * (a - blur)
+    lo, hi = np.percentile(e[mask], [2, 98])
+    v = np.clip((e - lo) / max(hi - lo, 1e-6), 0, 1) ** 0.85
 
     lines = []
     for r in range(rows):
         s = ""
-        for v in a[r]:
-            s += " " if v > 0.97 else RAMP[int(v * (len(RAMP) - 1) + 0.5)]  # white = background
+        for c in range(COLS):
+            s += RAMP[1 + int(v[r, c] * (len(RAMP) - 2) + 0.5)] if mask[r, c] else " "
         lines.append(s.rstrip())
 
     W, H = COLS * CW + PAD * 2, rows * RH + PAD * 2
