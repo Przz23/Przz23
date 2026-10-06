@@ -24,28 +24,12 @@
 
 I build complete products where hardware, firmware and software meet: from ESP32/STM32 prototypes to cross-platform apps and web backends. I hold a degree in Telecommunication Technologies Engineering from Universidad Miguel Hernández (UMH).
 
-## Tech stack
-
-| Area | Technologies |
-|---|---|
-| **Embedded & hardware** | ESP32 · STM32 · C/C++ · I2C · UART · RS-485 · PCB / electronics |
-| **Web & mobile** | JavaScript · TypeScript · React Native · Expo · PWA · Node.js |
-| **Backend & cloud** | Supabase · Stripe · REST APIs · Vercel |
-| **Other** | Python · Godot · Applied AI |
-
 ## Projects
 
-### [Kira](https://github.com/Przz23/kira) — Embedded
-Autonomous voice-AI assistant robot on ESP32-S3: C firmware, I2S audio, round SPI display, custom PCB and 3D-printed body.
+<div align="center">
 
-`ESP32-S3` `C` `I2S` `SPI` `KiCad`
+<img src="./projects-card.svg" alt="Projects: Kira, GameHole and Koty" width="860">
 
-### GameHole — Full-stack *(private)*
-Full-stack web platform with authentication, payments, database and PWA support.
+<sub><a href="https://github.com/Przz23/kira">View kira on GitHub →</a></sub>
 
-`Node.js` `Supabase` `Stripe` `Vercel`
-
-### Koty — Mobile *(private)*
-Cross-platform application with shared data, authentication and offline-oriented UX.
-
-`React Native` `Expo` `Supabase`
+</div>
