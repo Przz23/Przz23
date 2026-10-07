@@ -21,8 +21,8 @@
 
 <div align="center">
 
-<img src="./projects-card.svg" alt="Projects: Kira, GameHole and Koty" width="860">
+<img src="./projects-card.svg" alt="Projects: Kira, Second Brain, GameHole and Koty" width="860">
 
-<sub><a href="https://github.com/Przz23/kira">View kira on GitHub →</a></sub>
+<sub><a href="https://github.com/Przz23/kira">View kira on GitHub →</a> · <a href="https://github.com/Przz23/second-brain">Download Second Brain →</a></sub>
 
 </div>

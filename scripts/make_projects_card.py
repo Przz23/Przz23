@@ -21,6 +21,14 @@ PROJECTS = [
         "link": "github.com/Przz23/kira",
     },
     {
+        "name": "second-brain",
+        "kind": "Desktop",
+        "visibility": "public",
+        "desc": "Local-first Windows app for notes, tasks, documents and project repos, with a private AI chat running locally on Qwen3 8B via Ollama. Installer on GitHub Releases.",
+        "stack": ["Tauri", "Rust", "React", "SQLite", "Ollama"],
+        "link": "github.com/Przz23/second-brain",
+    },
+    {
         "name": "gamehole",
         "kind": "Full-stack",
         "visibility": "private",

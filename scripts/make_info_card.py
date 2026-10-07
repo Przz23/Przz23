@@ -21,7 +21,7 @@ ROWS = [
     ("Web/Mobile", "Node.js · React Native · Supabase"),
     ("Tools", "MATLAB / Simulink · Git"),
     None,
-    ("Projects", "Kira · GameHole · Koty"),
+    ("Projects", "Kira · Second Brain · GameHole · Koty"),
 ]
 
 
