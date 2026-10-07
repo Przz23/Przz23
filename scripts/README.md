@@ -4,7 +4,7 @@
 |---|---|---|
 | `fetch_contributions.py` | `data/contributions.json` | daily (GitHub Actions) |
 | `render_heatmap_svg.py` | `contrib-heatmap.svg` | daily (GitHub Actions) |
-| `make_info_card.py` | `info-card.svg` | manually (`STATIC=1` for a frozen frame) |
+| `make_info_card.py` | `info-card-v2.svg` | manually (`STATIC=1` for a frozen frame) |
 | `prep_photo.py` + `make_ascii_svg.py` | `portrait.svg` | manually, locally |
 
 ## Add the ASCII portrait
@@ -16,12 +16,12 @@
    python scripts/prep_photo.py
    python scripts/make_ascii_svg.py
    ```
-3. Review `portrait.svg`, then replace the `<img src="./info-card.svg" ...>` block in `README.md` with:
+3. Review `portrait.svg`, then replace the `<img src="./info-card-v2.svg" ...>` block in `README.md` with:
    ```html
    <table>
      <tr>
        <td valign="top"><img src="./portrait.svg" alt="ASCII portrait" width="370"></td>
-       <td valign="top"><img src="./info-card.svg" alt="Profile summary" width="490"></td>
+       <td valign="top"><img src="./info-card-v2.svg" alt="Profile summary" width="490"></td>
      </tr>
    </table>
    ```

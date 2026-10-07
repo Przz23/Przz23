@@ -1,4 +1,4 @@
-"""Neofetch-style info card -> info-card.svg. Set STATIC=1 for a frozen frame."""
+"""Neofetch-style info card -> info-card-v2.svg. Set STATIC=1 for a frozen frame."""
 import os
 from pathlib import Path
 
@@ -76,7 +76,7 @@ def main() -> None:
 {chr(10).join(out)}
 </svg>
 '''
-    dest = ROOT / "info-card.svg"
+    dest = ROOT / "info-card-v2.svg"
     dest.write_text(svg, encoding="utf-8")
     print(f"-> {dest} ({W}x{H})")
 
